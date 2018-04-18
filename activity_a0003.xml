@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bunker.bunkermate.a0003">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#ff69b4"
+        android:id="@+id/gridLayout1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0"
+                android:text="Name"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0"
+                android:text="Year"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle" />
+
+            <EditText
+                android:id="@+id/year"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0"
+                android:text="Roll No"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle" />
+
+            <EditText
+                android:id="@+id/rollno"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:backgroundTint="#ffffff"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="number"
+                android:maxLength="12"
+                android:maxWidth="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="0"
+                android:text="Dept"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle" />
+
+            <Spinner
+                android:id="@+id/dept"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:backgroundTint="#ffffff"
+                android:spinnerMode="dropdown"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="text"
+                android:maxLength="3"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/button1"
+            style="@android:style/Widget.DeviceDefault.Button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="2"
+            android:background="#00ff00"
+            android:text="Next"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ff69b4"
+            android:text="Overall"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle" />
+
+        <EditText
+            android:id="@+id/overall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="number"
+            android:maxLength="5"
+            android:text="% "
+            android:textAlignment="viewEnd" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="#ffdcde"
+        android:orientation="vertical"
+        android:layout_below="@+id/gridLayout1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:inputType="text"
+                    android:text="Subject-1"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent1"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:inputType="text"
+                    android:text="Subject-2"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent2"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:inputType="text"
+                    android:text="Subject-3"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent3"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:inputType="text"
+                    android:text="Subject-4"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent4"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:inputType="text"
+                    android:text="Subject-5"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent5"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:inputType="text"
+                    android:text="Subject-6"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent6"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:inputType="text"
+                    android:text="Subject-7"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent7"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:inputType="text"
+                    android:text="Subject-8"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent8"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/sub9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:inputType="text"
+                    android:text="Subject-9"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/percent9"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/border"
+                    android:fontFamily="sans-serif-condensed"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="% "
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+</RelativeLayout>
