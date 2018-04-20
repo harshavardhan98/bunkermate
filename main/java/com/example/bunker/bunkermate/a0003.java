@@ -1,6 +1,9 @@
 package com.example.bunker.bunkermate;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +24,9 @@ public class a0003 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a0003);
+
+        final int arr[]=new int[9];
+        final String subb[]=new String[9];
 
         Spinner sp = findViewById(R.id.dept);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.department, android.R.layout.simple_spinner_item);
@@ -54,9 +60,11 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        /*final EditText e1,e2,e3,e4,e5,e6,e7,e8;
+        final EditText e1,e2,e3,e4,e5,e6,e7,e8,e9;
         final EditText p1,p2,p3,p4,p5,p6,p7,p8,p9;
         final EditText n1,n2;
+        final Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
+
         e1=(EditText)findViewById(R.id.sub1);
         e2=(EditText)findViewById(R.id.sub2);
         e3=(EditText)findViewById(R.id.sub3);
@@ -65,6 +73,7 @@ public class a0003 extends AppCompatActivity {
         e6=(EditText)findViewById(R.id.sub6);
         e7=(EditText)findViewById(R.id.sub7);
         e8=(EditText)findViewById(R.id.sub8);
+        e9=(EditText)findViewById(R.id.sub9);
 
         p1=(EditText)findViewById(R.id.percent1);
         p2=(EditText)findViewById(R.id.percent2);
@@ -77,15 +86,25 @@ public class a0003 extends AppCompatActivity {
         p9=(EditText)findViewById(R.id.overall);
 
         n1=(EditText)findViewById(R.id.name);
-        n2=(EditText)findViewById(R.id.rollno);*/
+        n2=(EditText)findViewById(R.id.rollno);
 
-        Button b1 = (Button) findViewById(R.id.button1);
+        b1 = (Button) (findViewById(R.id.button1));
+        b2 = (Button) (findViewById(R.id.but1));
+        b3 = (Button) (findViewById(R.id.but2));
+        b4 = (Button) (findViewById(R.id.but3));
+        b5 = (Button) (findViewById(R.id.but4));
+        b6 = (Button) (findViewById(R.id.but5));
+        b7 = (Button) (findViewById(R.id.but6));
+        b8 = (Button) (findViewById(R.id.but7));
+        b9 = (Button) (findViewById(R.id.but8));
+        b10= (Button) (findViewById(R.id.but9));
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*boolean flag=true;
+                boolean flag=true;
 
-                if (e1.getText().toString().length() <= 0)
+                /*if (e1.getText().toString().length() <= 0)
                   flag=false;
                 if (e2.getText().toString().length() <= 0)
                   flag=false;
@@ -124,18 +143,34 @@ public class a0003 extends AppCompatActivity {
                 if (n1.getText().toString().length() <= 2)
                     flag=false;
                 if (n2.getText().toString().length() <= 2)
+                    flag=false;*/
+
+                if(b2.getBackground()==null)
                     flag=false;
 
-                if(flag==true) {*/
+                if(flag==true) {
                     Intent i1 = new Intent(getApplicationContext(), a0004.class);
+                    Bundle b=new Bundle();
+                    b.putIntArray("key",arr);
+                    subb[0]=e1.getText().toString();
+                    subb[1]=e2.getText().toString();
+                    subb[2]=e3.getText().toString();
+                    subb[3]=e4.getText().toString();
+                    subb[4]=e5.getText().toString();
+                    subb[5]=e6.getText().toString();
+                    subb[6]=e7.getText().toString();
+                    subb[6]=e8.getText().toString();
+                    subb[7]=e9.getText().toString();
+
+                    b.putStringArray("key1",subb);
+                    i1.putExtras(b);
                     startActivity(i1);
-                /*}
+                }
                 else
-                    Toast.makeText(getApplicationContext(),"Fill All Fields!",Toast.LENGTH_SHORT).show();*/
+                    Toast.makeText(getApplicationContext(),"Fill All Fields!",Toast.LENGTH_SHORT).show();
             }
         });
 
-        final Button b2 = (Button) (findViewById(R.id.but1));
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,6 +198,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b2.setBackgroundColor(color);
+                                arr[0]=color;
                             }
 
                             @Override
@@ -173,7 +209,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        final Button b3 = (Button) (findViewById(R.id.but2));
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -201,6 +236,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b3.setBackgroundColor(color);
+                                arr[1]=color;
                             }
 
                             @Override
@@ -211,7 +247,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        final Button b4 = (Button) (findViewById(R.id.but3));
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -239,6 +274,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b4.setBackgroundColor(color);
+                                arr[2]=color;
                             }
 
                             @Override
@@ -249,7 +285,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        final Button b5 = (Button) (findViewById(R.id.but4));
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -277,6 +312,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b5.setBackgroundColor(color);
+                                arr[3]=color;
                             }
 
                             @Override
@@ -287,8 +323,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-
-        final Button b6 = (Button) (findViewById(R.id.but5));
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -316,6 +350,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b6.setBackgroundColor(color);
+                                arr[4]=color;
                             }
 
                             @Override
@@ -326,7 +361,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        final Button b7 = (Button) (findViewById(R.id.but6));
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -354,6 +388,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b7.setBackgroundColor(color);
+                                arr[5]=color;
                             }
 
                             @Override
@@ -364,7 +399,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        final Button b8 = (Button) (findViewById(R.id.but7));
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -392,6 +426,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b8.setBackgroundColor(color);
+                                arr[6]=color;
                             }
 
                             @Override
@@ -402,7 +437,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-        final Button b9 = (Button) (findViewById(R.id.but8));
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -430,6 +464,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b9.setBackgroundColor(color);
+                                arr[7]=color;
                             }
 
                             @Override
@@ -440,8 +475,6 @@ public class a0003 extends AppCompatActivity {
             }
         });
 
-
-        final Button b10 = (Button) (findViewById(R.id.but9));
         b10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -469,6 +502,7 @@ public class a0003 extends AppCompatActivity {
                             public void onChooseColor(int position, int color) {
 
                                 b10.setBackgroundColor(color);
+                                arr[8]=color;
                             }
 
                             @Override

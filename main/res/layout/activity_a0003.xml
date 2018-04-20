@@ -200,7 +200,8 @@
                 <Button
                     android:id="@+id/but1"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent1"
@@ -242,7 +243,8 @@
                 <Button
                     android:id="@+id/but2"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent2"
@@ -284,7 +286,8 @@
                 <Button
                     android:id="@+id/but3"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent3"
@@ -326,7 +329,8 @@
                 <Button
                     android:id="@+id/but4"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent4"
@@ -368,7 +372,8 @@
                 <Button
                     android:id="@+id/but5"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent5"
@@ -410,7 +415,8 @@
                 <Button
                     android:id="@+id/but6"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent6"
@@ -452,7 +458,8 @@
                 <Button
                     android:id="@+id/but7"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent7"
@@ -494,7 +501,8 @@
                 <Button
                     android:id="@+id/but8"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent8"
@@ -536,7 +544,8 @@
                 <Button
                     android:id="@+id/but9"
                     android:layout_width="45dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="45dp"
+                    android:background="@drawable/border1"/>
 
                 <EditText
                     android:id="@+id/percent9"

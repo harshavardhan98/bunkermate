@@ -32,9 +32,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
                 android:text="1"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -42,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="2"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -51,8 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="3"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -60,8 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="4"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -69,8 +69,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="5"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -78,8 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="6"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -87,8 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="7"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -96,8 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="8"
-                android:textColor="#ffffff"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
         </TableRow>
 
@@ -656,44 +656,42 @@
         android:layout_alignParentStart="true"
         android:orientation="horizontal">
 
-        <RadioGroup
-            android:id="@+id/radiogroup2"
+        <RadioButton
+            android:id="@+id/rb6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
+        <RadioButton
+            android:id="@+id/rb7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="sub6" />
+        <RadioButton
+            android:id="@+id/rb8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="lab1" />
+        <RadioButton
+            android:id="@+id/rb9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="lab2" />
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="lab3" />
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="free" />
-        </RadioGroup>
+        <RadioButton
+            android:id="@+id/rb10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="FREE"
+            android:textSize="10sp" />
 
     </LinearLayout>
 
@@ -701,48 +699,59 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_above="@+id/linearLayout2"
+
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout4">
 
-         <RadioGroup
-             android:id="@+id/radiogroup1"
+        <RadioButton
+            android:id="@+id/rb1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="sub1" />
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="sub2" />
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="sub3" />
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="sub4" />
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="sub5" />
-        </RadioGroup>
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="10sp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button41"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:background="#00FF00"
+        android:text="FINISH"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
