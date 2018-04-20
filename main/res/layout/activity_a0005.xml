@@ -83,7 +83,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffffff"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent1"
@@ -122,7 +123,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffb2ff"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent2"
@@ -161,7 +163,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffffff"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent3"
@@ -200,7 +203,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffb2ff"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent4"
@@ -239,7 +243,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffffff"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent5"
@@ -278,7 +283,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffb2ff"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/percent6"
@@ -408,12 +414,11 @@
                 android:background="#003aff">
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/day"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
                     android:layout_weight="1"
-                    android:text="Mon"
                     android:textAlignment="center"
                     android:textAppearance="@android:style/TextAppearance.Holo.Medium"
                     android:textColor="#ffffff"
@@ -521,5 +526,14 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:text="submit" />
 
 </RelativeLayout>

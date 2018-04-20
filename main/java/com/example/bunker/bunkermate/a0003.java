@@ -1,6 +1,8 @@
 package com.example.bunker.bunkermate;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -13,9 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
 import petrov.kristiyan.colorpicker.ColorPicker;
 
 public class a0003 extends AppCompatActivity {
@@ -61,9 +61,11 @@ public class a0003 extends AppCompatActivity {
         });
 
         final EditText e1,e2,e3,e4,e5,e6,e7,e8,e9;
-        final EditText p1,p2,p3,p4,p5,p6,p7,p8,p9;
+        final EditText p1,p2,p3,p4,p5,p6,p7,p8,p9,p10;
         final EditText n1,n2;
         final Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
+        final SharedPreferences sharedpref,sharedpref1,sharedpref2;
+        final SharedPreferences.Editor editor,editor1,editor2;
 
         e1=(EditText)findViewById(R.id.sub1);
         e2=(EditText)findViewById(R.id.sub2);
@@ -83,7 +85,8 @@ public class a0003 extends AppCompatActivity {
         p6=(EditText)findViewById(R.id.percent6);
         p7=(EditText)findViewById(R.id.percent7);
         p8=(EditText)findViewById(R.id.percent8);
-        p9=(EditText)findViewById(R.id.overall);
+        p9=(EditText)findViewById(R.id.percent9);
+        p10=(EditText)findViewById(R.id.overall);
 
         n1=(EditText)findViewById(R.id.name);
         n2=(EditText)findViewById(R.id.rollno);
@@ -98,6 +101,13 @@ public class a0003 extends AppCompatActivity {
         b8 = (Button) (findViewById(R.id.but7));
         b9 = (Button) (findViewById(R.id.but8));
         b10= (Button) (findViewById(R.id.but9));
+
+        sharedpref1=getSharedPreferences("colors", Context.MODE_PRIVATE);
+        editor1=sharedpref1.edit();
+        sharedpref=getSharedPreferences("subject", Context.MODE_PRIVATE);
+        editor=sharedpref.edit();
+        sharedpref2=getSharedPreferences("percent", Context.MODE_PRIVATE);
+        editor2=sharedpref2.edit();
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,7 +147,7 @@ public class a0003 extends AppCompatActivity {
                     flag=false;
                 if (p8.getText().toString().length() <= 2)
                     flag=false;
-                if (p9.getText().toString().length() <= 2)
+                if (p10.getText().toString().length() <= 2)
                     flag=false;
 
                 if (n1.getText().toString().length() <= 2)
@@ -145,10 +155,31 @@ public class a0003 extends AppCompatActivity {
                 if (n2.getText().toString().length() <= 2)
                     flag=false;*/
 
-                if(b2.getBackground()==null)
-                    flag=false;
-
                 if(flag==true) {
+                    //Toast.makeText(this, e1.getText().toString(), Toast.LENGTH_SHORT).show();
+                    editor.putString("sub1",e1.getText().toString());
+                    editor.putString("sub2",e2.getText().toString());
+                    editor.putString("sub3",e3.getText().toString());
+                    editor.putString("sub4",e4.getText().toString());
+                    editor.putString("sub5",e5.getText().toString());
+                    editor.putString("sub6",e6.getText().toString());
+                    editor.putString("sub7",e7.getText().toString());
+                    editor.putString("sub8",e8.getText().toString());
+                    editor.putString("sub9",e9.getText().toString());
+                    editor.apply();
+
+                    editor2.putString("per1",p1.getText().toString());
+                    editor2.putString("per2",p2.getText().toString());
+                    editor2.putString("per3",p3.getText().toString());
+                    editor2.putString("per4",p4.getText().toString());
+                    editor2.putString("per5",p5.getText().toString());
+                    editor2.putString("per6",p6.getText().toString());
+                    editor2.putString("per7",p7.getText().toString());
+                    editor2.putString("per8",p8.getText().toString());
+                    editor2.putString("per9",p9.getText().toString());
+                    editor2.putString("over",p10.getText().toString());
+                    editor2.apply();
+
                     Intent i1 = new Intent(getApplicationContext(), a0004.class);
                     Bundle b=new Bundle();
                     b.putIntArray("key",arr);
@@ -199,6 +230,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b2.setBackgroundColor(color);
                                 arr[0]=color;
+                                editor1.putInt("sub1",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -237,6 +270,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b3.setBackgroundColor(color);
                                 arr[1]=color;
+                                editor1.putInt("sub2",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -275,6 +310,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b4.setBackgroundColor(color);
                                 arr[2]=color;
+                                editor1.putInt("sub3",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -313,6 +350,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b5.setBackgroundColor(color);
                                 arr[3]=color;
+                                editor1.putInt("sub4",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -351,6 +390,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b6.setBackgroundColor(color);
                                 arr[4]=color;
+                                editor1.putInt("sub5",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -389,6 +430,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b7.setBackgroundColor(color);
                                 arr[5]=color;
+                                editor1.putInt("sub6",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -427,6 +470,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b8.setBackgroundColor(color);
                                 arr[6]=color;
+                                editor1.putInt("sub7",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -465,6 +510,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b9.setBackgroundColor(color);
                                 arr[7]=color;
+                                editor1.putInt("sub8",color);
+                                editor1.apply();
                             }
 
                             @Override
@@ -503,6 +550,8 @@ public class a0003 extends AppCompatActivity {
 
                                 b10.setBackgroundColor(color);
                                 arr[8]=color;
+                                editor1.putInt("sub9",color);
+                                editor1.apply();
                             }
 
                             @Override

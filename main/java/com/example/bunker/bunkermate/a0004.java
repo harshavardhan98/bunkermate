@@ -1,6 +1,8 @@
 package com.example.bunker.bunkermate;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +15,12 @@ import android.widget.Toast;
 
 public class a0004 extends AppCompatActivity implements View.OnClickListener {
 
+    int total_dr=8;
+    int total_nr=0;
+    RadioButton chosen_btn;
     public static int chosen=0;
+    int chosen_color;
+
     public void clickFunction(View v)
     {
         Log.i("info","button pressed");
@@ -23,9 +30,16 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a0004);
 
+        SharedPreferences sharedpref=getSharedPreferences("data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedpref.edit();
+        editor.putInt("total_nr",total_nr);
+        editor.putInt("total_dr",total_dr);
+        editor.apply();
+
         Bundle b=getIntent().getExtras();
         final int[] arr=b.getIntArray("key");
         final String[] subb=b.getStringArray("key1");
+
 
         final RadioButton b1=(RadioButton) findViewById(R.id.rb1);
         final RadioButton b2=(RadioButton) findViewById(R.id.rb2);
@@ -103,7 +117,6 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
         final Button g8=(Button) findViewById(R.id.button49);     g8.setOnClickListener(this);
 
         final Button finish=(Button) findViewById(R.id.button41);
-
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,6 +139,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[0];
+                chosen_btn=b1;
+                chosen_color=0;
             }
         });
 
@@ -143,6 +158,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[1];
+                chosen_btn=b2;
+                chosen_color=1;
             }
         });
 
@@ -160,6 +177,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[2];
+                chosen_btn=b3;
+                chosen_color=2;
             }
         });
 
@@ -177,6 +196,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[3];
+                chosen_btn=b4;
+                chosen_color=3;
             }
         });
 
@@ -194,6 +215,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[4];
+                chosen_btn=b5;
+                chosen_color=4;
             }
         });
 
@@ -211,6 +234,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[5];
+                chosen_btn=b6;
+                chosen_color=5;
             }
         });
 
@@ -228,6 +253,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[6];
+                chosen_btn=b7;
+                chosen_color=6;
             }
         });
 
@@ -245,6 +272,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(false);
                 b10.setChecked(false);
                 chosen=arr[7];
+                chosen_btn=b8;
+                chosen_color=7;
             }
         });
 
@@ -262,6 +291,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b9.setChecked(true);
                 b10.setChecked(false);
                 chosen=arr[8];
+                chosen_btn=b9;
+                chosen_color=1;
             }
         });
 
@@ -278,7 +309,8 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
                 b8.setChecked(false);
                 b9.setChecked(false);
                 b10.setChecked(true);
-                chosen= Color.parseColor("#ffffff");
+                chosen_btn=b10;
+                chosen= Color.WHITE;
             }
         });
     }
@@ -290,5 +322,295 @@ public class a0004 extends AppCompatActivity implements View.OnClickListener {
             GradientDrawable gd=(GradientDrawable) v.getBackground().mutate();
             gd.setColor(chosen);
         }
+
+        SharedPreferences sharedpref=getSharedPreferences("timetable", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedpref.edit();
+
+        SharedPreferences sharedpref1=getSharedPreferences("timetable_color", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor1=sharedpref1.edit();
+
+        int pid=v.getId();
+
+        if(pid==R.id.button)
+        {
+            editor.putString("Mon0",chosen_btn.getText().toString());
+            editor1.putInt("Mon0",chosen);
+        }
+
+
+        if(pid==R.id.button1)
+        {
+            editor.putString("Mon1",chosen_btn.getText().toString());
+            editor1.putInt("Mon1",chosen);
+        }
+
+
+        if(pid==R.id.button2)
+        {
+            editor.putString("Mon2",chosen_btn.getText().toString());
+            editor1.putInt("Mon2",chosen);
+        }
+
+
+        if(pid==R.id.button3)
+        {
+            editor.putString("Mon3",chosen_btn.getText().toString());
+            editor1.putInt("Mon3",chosen);
+        }
+
+
+        if(pid==R.id.button4)
+        {
+            editor.putString("Mon4",chosen_btn.getText().toString());
+            editor1.putInt("Mon4",chosen);
+        }
+
+
+        if(pid==R.id.button5)
+        {
+            editor.putString("Mon5",chosen_btn.getText().toString());
+            editor1.putInt("Mon5",chosen);
+        }
+
+
+        if(pid==R.id.button6)
+        {
+            editor.putString("Mon6",chosen_btn.getText().toString());
+            editor1.putInt("Mon6",chosen);
+        }
+
+
+        if(pid==R.id.button7)
+        {
+            editor.putString("Mon7",chosen_btn.getText().toString());
+            editor1.putInt("Mon7",chosen);
+        }
+
+        if(pid==R.id.button8)
+        {
+            editor.putString("Tue0",chosen_btn.getText().toString());
+            editor1.putInt("Tue0",chosen);
+        }
+
+        if(pid==R.id.button9)
+        {
+            editor.putString("Tue1",chosen_btn.getText().toString());
+            editor1.putInt("Tue1",chosen);
+        }
+
+        if(pid==R.id.button10)
+        {
+            editor.putString("Tue2",chosen_btn.getText().toString());
+            editor1.putInt("Tue2",chosen);
+        }
+
+        if(pid==R.id.button11)
+        {
+            editor.putString("Tue3",chosen_btn.getText().toString());
+            editor1.putInt("Tue3",chosen);
+        }
+
+        if(pid==R.id.button12)
+        {
+            editor.putString("Tue4",chosen_btn.getText().toString());
+            editor1.putInt("Tue4",chosen);
+        }
+
+        if(pid==R.id.button14)
+        {
+            editor.putString("Tue5",chosen_btn.getText().toString());
+            editor1.putInt("Tue5",chosen);
+        }
+
+        if(pid==R.id.button15)
+        {
+            editor.putString("Tue6",chosen_btn.getText().toString());
+            editor1.putInt("Tue6",chosen);
+        }
+
+        if(pid==R.id.button16)
+        {
+            editor.putString("Tue7",chosen_btn.getText().toString());
+            editor1.putInt("Tue7",chosen);
+        }
+
+        if(pid==R.id.button17)
+        {
+            editor.putString("Wed0",chosen_btn.getText().toString());
+            editor1.putInt("Wed0",chosen);
+        }
+
+        if(pid==R.id.button18)
+        {
+            editor.putString("Wed1",chosen_btn.getText().toString());
+            editor1.putInt("Wed1",chosen);
+        }
+
+        if(pid==R.id.button19)
+        {
+            editor.putString("Wed2",chosen_btn.getText().toString());
+            editor1.putInt("Wed2",chosen);
+        }
+
+        if(pid==R.id.button20)
+        {
+            editor.putString("Wed3",chosen_btn.getText().toString());
+            editor1.putInt("Wed3",chosen);
+        }
+
+        if(pid==R.id.button21)
+        {
+            editor.putString("Wed4",chosen_btn.getText().toString());
+            editor1.putInt("Wed4",chosen);
+        }
+
+        if(pid==R.id.button22)
+        {
+            editor.putString("Wed5",chosen_btn.getText().toString());
+            editor1.putInt("Wed5",chosen);
+        }
+
+        if(pid==R.id.button23)
+        {
+            editor.putString("Wed6",chosen_btn.getText().toString());
+            editor1.putInt("Wed6",chosen);
+        }
+
+        if(pid==R.id.button24)
+        {
+            editor.putString("Wed7",chosen_btn.getText().toString());
+            editor1.putInt("Wed7",chosen);
+        }
+
+        if(pid==R.id.button25) {
+            editor.putString("Thu0" , chosen_btn.getText().toString());
+            editor1.putInt("Thu0", chosen);
+        }
+        if(pid==R.id.button26)
+        {
+            editor.putString("Thu1",chosen_btn.getText().toString());
+            editor1.putInt("Thu1",chosen);
+        }
+
+        if(pid==R.id.button27)
+        {
+            editor.putString("Thu2",chosen_btn.getText().toString());
+            editor1.putInt("Thu2",chosen);
+        }
+
+
+        if(pid==R.id.button28)
+        {
+            editor.putString("Thu3",chosen_btn.getText().toString());
+            editor1.putInt("Thu3",chosen);
+        }
+
+        if(pid==R.id.button29)
+        {
+            editor.putString("Thu4",chosen_btn.getText().toString());
+            editor1.putInt("Thu4",chosen);
+        }
+
+        if(pid==R.id.button30)
+        {
+            editor.putString("Thu5",chosen_btn.getText().toString());
+            editor1.putInt("Thu5",chosen);
+        }
+
+        if(pid==R.id.button31)
+        {
+            editor.putString("Thu6",chosen_btn.getText().toString());
+            editor1.putInt("Thu6",chosen);
+        }
+
+        if(pid==R.id.button32)
+        {
+            editor.putString("Thu7",chosen_btn.getText().toString());
+            editor1.putInt("Thu7",chosen);
+        }
+
+        if(pid==R.id.button33) {
+            editor.putString("Fri0" , chosen_btn.getText().toString());
+            editor1.putInt("Fri0" , chosen);
+        }
+
+        if(pid==R.id.button34) {
+            editor.putString("Fri1", chosen_btn.getText().toString());
+            editor1.putInt("Fri1", chosen);
+        }
+
+        if(pid==R.id.button35) {
+            editor.putString("Fri2"  , chosen_btn.getText().toString());
+            editor1.putInt("Fri2" , chosen);
+        }
+
+        if(pid==R.id.button36) {
+            editor.putString("Fri3", chosen_btn.getText().toString());
+            editor1.putInt("Fri3" , chosen);
+        }
+
+        if(pid==R.id.button37) {
+            editor.putString("Fri4", chosen_btn.getText().toString());
+            editor1.putInt("Fri4", chosen);
+        }
+
+        if(pid==R.id.button38) {
+            editor.putString("Fri5", chosen_btn.getText().toString());
+            editor1.putInt("Fri5", chosen);
+        }
+
+        if(pid==R.id.button39) {
+            editor.putString("Fri6", chosen_btn.getText().toString());
+            editor1.putInt("Fri6", chosen);
+        }
+
+        if(pid==R.id.button40) {
+            editor.putString("Fri7", chosen_btn.getText().toString());
+            editor1.putInt("Fri7", chosen);
+        }
+
+
+        if(pid==R.id.button42) {
+            editor.putString("Sat0", chosen_btn.getText().toString());
+            editor1.putInt("Sat0", chosen);
+        }
+
+        if(pid==R.id.button43) {
+            editor.putString("Sat1", chosen_btn.getText().toString());
+            editor1.putInt("Sat1", chosen);
+        }
+
+        if(pid==R.id.button44) {
+            editor.putString("Sat2", chosen_btn.getText().toString());
+            editor1.putInt("Sat2", chosen);
+        }
+
+        if(pid==R.id.button45) {
+            editor.putString("Sat3", chosen_btn.getText().toString());
+            editor1.putInt("Sat3", chosen);
+        }
+
+        if(pid==R.id.button46) {
+            editor.putString("Sat4", chosen_btn.getText().toString());
+            editor1.putInt("Sat4", chosen);
+        }
+
+        if(pid==R.id.button47) {
+            editor.putString("Sat5", chosen_btn.getText().toString());
+            editor1.putInt("Sat5", chosen);
+        }
+
+        if(pid==R.id.button48) {
+            editor.putString("Sat6", chosen_btn.getText().toString());
+            editor1.putInt("Sat6", chosen);
+        }
+
+        if(pid==R.id.button49) {
+            editor.putString("Sat7", chosen_btn.getText().toString());
+            editor1.putInt("Sat7", chosen);
+        }
+
+        editor.apply();
+        editor1.apply();
     }
 }
