@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#98fb98"
     tools:context=".a0005">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/linearLayout3">
+        android:layout_height="200dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -26,23 +26,22 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textAlignment="center"
-                    android:textSize="35sp"
-                    android:textStyle="bold"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:text="Overall" />
+                    android:text="Overall"
+                    android:textAlignment="center"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button13"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="5dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/border2"
-                    android:text="75%"
                     android:textSize="50sp" />
             </RelativeLayout>
 
@@ -54,11 +53,11 @@
             android:layout_above="@+id/linearLayout"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
-            android:background="#ffdcde"
             android:layout_below="@+id/gridLayout1"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
             android:layout_weight="2"
+            android:background="#ffdcde"
             android:orientation="vertical">
 
             <TableRow
@@ -71,7 +70,7 @@
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/but1"
+                        android:id="@+id/next"
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/border" />
@@ -83,8 +82,9 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffffff"
+                        android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/percent1"
@@ -123,8 +123,9 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffb2ff"
+                        android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/percent2"
@@ -163,8 +164,9 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffffff"
+                        android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/percent3"
@@ -203,8 +205,9 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffb2ff"
+                        android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/percent4"
@@ -243,8 +246,9 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffffff"
+                        android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/percent5"
@@ -283,8 +287,9 @@
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:background="#ffb2ff"
+                        android:textAllCaps="true"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/percent6"
@@ -306,14 +311,14 @@
     </LinearLayout>
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:stretchColumns="*"
-        android:layout_marginTop="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout3"
-        android:id="@+id/tableLayout">
+        android:layout_marginTop="20dp"
+        android:stretchColumns="*">
 
         <TableRow
             android:layout_width="0dp"
@@ -434,7 +439,7 @@
                 android:onClick="clickFunction" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/start"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -499,9 +504,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tableLayout"
-        android:layout_marginTop="48dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="48dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -509,7 +514,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00ff00 "
+            android:background="#ffffff"
             android:text="FREE"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -519,9 +524,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF0000"
+            android:background="#FFff00"
             android:text="BUNK"
-            android:textColor="#ffffff"
             android:textSize="20sp"
             android:textStyle="bold" />
 
