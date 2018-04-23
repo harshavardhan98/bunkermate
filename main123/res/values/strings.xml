@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">bunkermate</string>
+    <string-array name="department">
+        <item>BME</item>
+        <item>CHEM</item>
+        <item>CIVIL</item>
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>IT</item>
+        <item>MECH</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>
