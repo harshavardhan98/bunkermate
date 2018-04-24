@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bunker.bunkermate">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ack"
+        android:label="ACK"
+        android:roundIcon="@mipmap/ack"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".a0001">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".a00021" />
+        <activity android:name=".a0002" />
+        <activity android:name=".a00022" />
+        <activity android:name=".a0003" />
+        <activity android:name=".a0004" />
+        <activity android:name=".a0005" />
+    </application>
+
+</manifest>
