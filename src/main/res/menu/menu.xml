@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/pop1" android:title="Time-Table"></item>
+    <item android:id="@+id/pop2" android:title="Modify Time-Table"></item>
+    <item android:id="@+id/pop3" android:title="Modify Start-Date"></item>
+    <item android:id="@+id/pop4" android:title="Modify Bunk"></item>
+    <item android:id="@+id/pop5" android:title="Help"></item>
+    <item android:id="@+id/pop6" android:title="Exit"></item>
+</menu>

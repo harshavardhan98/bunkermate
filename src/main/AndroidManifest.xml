@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bmate.bunkermate">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ack"
+        android:label="ACK Attendance"
+        android:roundIcon="@mipmap/ack"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="bmate.ack.bunker.bunkermate.a0001">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a0002"
+            android:label="Subjects" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a0003"
+            android:label="Time-Table" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a00031"
+            android:label="Modify" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a00032"
+            android:label="Time Table" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a0004"
+            android:label="Start-Date" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a00041"
+            android:label="Modify Start-Date" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a0005"
+            android:label="ACK Attendance" />
+        <activity
+            android:name="bmate.ack.bunker.bunkermate.a00051"
+            android:label="Modify Bunk" />
+    </application>
+
+</manifest>
